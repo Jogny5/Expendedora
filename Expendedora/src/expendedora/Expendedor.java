@@ -10,6 +10,8 @@ public class Expendedor {
     private DepositoBebidas sprite;
     private DepositoBebidas fanta;
     
+    private DepositoVuelto dv;
+    
     public Expendedor(int num, int precio){
         
         numBebidas=num;
@@ -18,6 +20,8 @@ public class Expendedor {
         coca = new DepositoBebidas();
         sprite = new DepositoBebidas();
         fanta = new DepositoBebidas();
+        
+        dv = new DepositoVuelto();
         
         for(int i=1;i<numBebidas+1;i++){
             
@@ -52,6 +56,7 @@ public class Expendedor {
                 System.out.println(e.getMessage());
             }
             
+            dv.addMonedas(m);
             return null;
         }
         
@@ -65,10 +70,19 @@ public class Expendedor {
                     System.out.println(e.getMessage());
                 }
                 
+                dv.addMonedas(m);
                 return null;
             }
             
-            else return coca.getBebida();
+            else{
+                for (int i=0;i<(m.getValor()-precioBebidas)/100;i++){
+                    
+                    Moneda100 mon = new Moneda100();
+                    dv.addMonedas(mon);
+                }
+                
+                return coca.getBebida();
+            }
         }
         
         if(cual ==2){
@@ -81,10 +95,19 @@ public class Expendedor {
                     System.out.println(e.getMessage());
                 }
                 
+                dv.addMonedas(m);
                 return null;
             }
             
-            else return sprite.getBebida();    
+            else{
+                for (int i=0;i<(m.getValor()-precioBebidas)/100;i++){
+                    
+                    Moneda100 mon = new Moneda100();
+                    dv.addMonedas(mon);
+                }
+                
+                return sprite.getBebida();
+            }    
         }
         
         if(cual ==3){
@@ -97,10 +120,19 @@ public class Expendedor {
                     System.out.println(e.getMessage());
                 }
                 
+                dv.addMonedas(m);
                 return null;
             }
             
-            else return fanta.getBebida();     
+            else{
+                for (int i=0;i<(m.getValor()-precioBebidas)/100;i++){
+                    
+                    Moneda100 mon = new Moneda100();
+                    dv.addMonedas(mon);
+                }
+                
+                return fanta.getBebida();
+            }   
         }
         
         else{
@@ -112,9 +144,11 @@ public class Expendedor {
             }catch(NoHayBebidaException e){
                 System.out.println(e.getMessage());
             }
-            
+            dv.addMonedas(m);
             return null;
         }
+        
+        
             
     }
     
@@ -123,6 +157,7 @@ public class Expendedor {
     
     public Moneda getVuelto(){
         
+        return dv.getMonedas();
     }
     
     

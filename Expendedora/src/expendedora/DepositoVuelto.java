@@ -1,13 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package expendedora;
 
-/**
- *
- * @author diego
- */
-public class DepositoVuelto {
+import java.util.ArrayList;
+
+class DepositoVuelto{
     
+    private final ArrayList<Moneda> aa;
+        
+    public DepositoVuelto(){
+        
+        aa=new ArrayList();
+    }
+    
+    public void addMonedas(Moneda m){
+        
+        this.aa.add(m);   
+    }
+    
+    
+    public Moneda getMonedas(){
+        
+        if(aa.size()>0){
+            
+            return aa.remove(0);
+        }
+        
+        else{
+            return null;
+        }
+        
+    }
 }
