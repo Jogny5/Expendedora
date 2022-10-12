@@ -6,18 +6,18 @@ public class Expendedor {
     private int numBebidas;
     private int precioBebidas;
     
-    private ArrayList coca;
-    private ArrayList sprite;
-    private ArrayList fanta;
+    private ArrayList<CocaCola> coca;
+    private ArrayList<Sprite> sprite;
+    private ArrayList<Fanta> fanta;
     
     public Expendedor(int num, int precio){
         
         numBebidas=num;
         precioBebidas=precio;
         
-        coca = new ArrayList<CocaCola>();
-        sprite = new ArrayList<Sprite>();
-        fanta = new ArrayList<Fanta>();
+        coca = new ArrayList();
+        sprite = new ArrayList();
+        fanta = new ArrayList();
         
         for(int i=1;i<numBebidas+1;i++){
             
@@ -55,7 +55,13 @@ public class Expendedor {
         
         if(cual ==1){
           
-            if(coca.remove(0)==null){
+            if(coca.get(0)==null){
+              
+                try{
+                    throw new NoHayBebidaException("No hay bebida");
+                }catch(NoHayBebidaException e){
+                    System.out.println(e.getMessage());
+                }
                 
             }
             
@@ -63,11 +69,31 @@ public class Expendedor {
         }
         
         if(cual ==2){
+           
+            if(sprite.get(0)==null){
+                
+                try{
+                    throw new NoHayBebidaException("No hay bebida");
+                }catch(NoHayBebidaException e){
+                    System.out.println(e.getMessage());
+                }
+            }
             
+            else return sprite.remove(0);    
         }
         
         if(cual ==3){
             
+            if(fanta.get(0)==null){
+               
+                try{
+                    throw new NoHayBebidaException("No hay bebida");
+                }catch(NoHayBebidaException e){
+                    System.out.println(e.getMessage());
+                }
+            }
+            
+            else return fanta.remove(0);     
         }
         
         else{
@@ -80,21 +106,20 @@ public class Expendedor {
                 System.out.println(e.getMessage());
             }
         }
-    
-    
-    }
-        
-        
         
     }
+    
+    
     
     public Moneda getVuelto(){
         
-        
     }
     
     
     
+}   
     
-    
-}
+        
+        
+        
+  
