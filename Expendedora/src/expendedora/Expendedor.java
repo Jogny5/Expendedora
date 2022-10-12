@@ -6,18 +6,18 @@ public class Expendedor {
     private int numBebidas;
     private int precioBebidas;
     
-    private ArrayList<CocaCola> coca;
-    private ArrayList<Sprite> sprite;
-    private ArrayList<Fanta> fanta;
+    private DepositoBebidas coca;
+    private DepositoBebidas sprite;
+    private DepositoBebidas fanta;
     
     public Expendedor(int num, int precio){
         
         numBebidas=num;
         precioBebidas=precio;
         
-        coca = new ArrayList();
-        sprite = new ArrayList();
-        fanta = new ArrayList();
+        coca = new DepositoBebidas();
+        sprite = new DepositoBebidas();
+        fanta = new DepositoBebidas();
         
         for(int i=1;i<numBebidas+1;i++){
             
@@ -25,9 +25,9 @@ public class Expendedor {
             Sprite s = new Sprite(2*i);
             Fanta f = new Fanta(3*i);
             
-            coca.add(c);
-            sprite.add(s);
-            fanta.add(f);
+            coca.addBebida(c);
+            sprite.addBebida(s);
+            fanta.addBebida(f);
             
         }
     }
@@ -51,11 +51,13 @@ public class Expendedor {
             }catch(PagoInsuficienteException e){
                 System.out.println(e.getMessage());
             }
+            
+            return null;
         }
         
         if(cual ==1){
           
-            if(coca.get(0)==null){
+            if(coca.getBebida()==null){
               
                 try{
                     throw new NoHayBebidaException("No hay bebida");
@@ -63,37 +65,42 @@ public class Expendedor {
                     System.out.println(e.getMessage());
                 }
                 
+                return null;
             }
             
-            else return coca.remove(0);
+            else return coca.getBebida();
         }
         
         if(cual ==2){
            
-            if(sprite.get(0)==null){
+            if(sprite.getBebida()==null){
                 
                 try{
                     throw new NoHayBebidaException("No hay bebida");
                 }catch(NoHayBebidaException e){
                     System.out.println(e.getMessage());
                 }
+                
+                return null;
             }
             
-            else return sprite.remove(0);    
+            else return sprite.getBebida();    
         }
         
         if(cual ==3){
             
-            if(fanta.get(0)==null){
+            if(fanta.getBebida()==null){
                
                 try{
                     throw new NoHayBebidaException("No hay bebida");
                 }catch(NoHayBebidaException e){
                     System.out.println(e.getMessage());
                 }
+                
+                return null;
             }
             
-            else return fanta.remove(0);     
+            else return fanta.getBebida();     
         }
         
         else{
@@ -105,9 +112,12 @@ public class Expendedor {
             }catch(NoHayBebidaException e){
                 System.out.println(e.getMessage());
             }
+            
+            return null;
         }
-        
+            
     }
+    
     
     
     
