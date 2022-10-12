@@ -32,6 +32,67 @@ public class Expendedor {
         }
     }
     
+    public Bebida comprarBebida(Moneda m, int cual){
+        
+        try{
+            if(m == null){
+                throw new PagoIncorrectoException("No tienes una moneda valida");
+            }        
+        }catch(PagoIncorrectoException e){
+            System.out.println(e.getMessage());
+        }
+        
+        if(m.getValor()<precioBebidas){
+            
+            try{
+                if(m == null){
+                    throw new PagoInsuficienteException("No tienes dinero suficiente");
+                }        
+            }catch(PagoInsuficienteException e){
+                System.out.println(e.getMessage());
+            }
+        }
+        
+        if(cual ==1){
+          
+            if(coca.remove(0)==null){
+                
+            }
+            
+            else return coca.remove(0);
+        }
+        
+        if(cual ==2){
+            
+        }
+        
+        if(cual ==3){
+            
+        }
+        
+        else{
+           
+            try{
+                if(m == null){
+                    throw new NoHayBebidaException("No hay bebida");
+                }        
+            }catch(NoHayBebidaException e){
+                System.out.println(e.getMessage());
+            }
+        }
+    
+    
+    }
+        
+        
+        
+    }
+    
+    public Moneda getVuelto(){
+        
+        
+    }
+    
     
     
     
