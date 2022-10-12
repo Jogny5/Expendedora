@@ -49,9 +49,7 @@ public class Expendedor {
         if(m.getValor()<precioBebidas){
             
             try{
-                if(m == null){
-                    throw new PagoInsuficienteException("No tienes dinero suficiente");
-                }        
+                throw new PagoInsuficienteException("No tienes dinero suficiente");        
             }catch(PagoInsuficienteException e){
                 System.out.println(e.getMessage());
             }
@@ -150,10 +148,7 @@ public class Expendedor {
         
         
             
-    }
-    
-    
-    
+    }    
     
     public Moneda getVuelto(){
         
