@@ -11,14 +11,15 @@ public class Expendedora {
                 
         Comprador com = new Comprador(m1k,1,exp);
         
-        
-        exp.comprarBebida(m1k,2);
-        System.out.println(exp.getVuelto());
-        System.out.println(exp.getVuelto());
-        System.out.println(exp.getVuelto());
-        
+                
         exp.comprarBebida(m1k,2);
         System.out.println(com.cuantoVuelto());
+        
+        System.out.println(exp.getVuelto());
+        System.out.println(exp.getVuelto());
+        System.out.println(exp.getVuelto());
+        
+        
        
         
     }

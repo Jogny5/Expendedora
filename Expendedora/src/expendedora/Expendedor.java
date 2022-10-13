@@ -158,7 +158,12 @@ public class Expendedor {
     public int getPrecioBebidas() {
         return precioBebidas;
     }
+
+    public DepositoVuelto getDv() {
+        return dv;
+    }
     
     
-    
+
+   
 }

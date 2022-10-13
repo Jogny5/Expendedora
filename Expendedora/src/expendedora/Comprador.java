@@ -16,8 +16,13 @@ public class Comprador {
     
     
     public int cuantoVuelto(){
-        int x = m.getValor()-exp.getPrecioBebidas();
-        return x;
+        
+        int a=0;
+        for(int i=0;i<exp.getDv().tamano();i++){
+            a=a+exp.getDv().Recorrer(i).getValor();
+        }
+        
+        return a;
         
     }
     
