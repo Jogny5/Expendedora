@@ -38,15 +38,8 @@ public class Expendedor {
     
     public Bebida comprarBebida(Moneda m, int cual){
         
-        try{
-            if(m == null){
-                throw new PagoIncorrectoException("No tienes una moneda valida");
-            }        
-        }catch(PagoIncorrectoException e){
-            System.out.println(e.getMessage());
-        }
         
-        if(m.getValor()<precioBebidas){
+        if(m!=null && m.getValor()<precioBebidas){
             
             try{
                 throw new PagoInsuficienteException("No tienes dinero suficiente");        
@@ -69,6 +62,15 @@ public class Expendedor {
                 }
                 
                 dv.addMonedas(m);
+                return null;
+            }
+            
+            else if(m==null){
+                try{
+                    throw new PagoIncorrectoException("No tienes una moneda valida");
+                }catch(PagoIncorrectoException e){
+                    System.out.println(e.getMessage());
+                }
                 return null;
             }
             
@@ -97,6 +99,15 @@ public class Expendedor {
                 return null;
             }
             
+            else if(m==null){
+                try{
+                    throw new PagoIncorrectoException("No tienes una moneda valida");
+                }catch(PagoIncorrectoException e){
+                    System.out.println(e.getMessage());
+                }
+                return null;
+            }
+            
             else{
                 for (int i=0;i<(m.getValor()-precioBebidas)/100;i++){
                     
@@ -119,6 +130,15 @@ public class Expendedor {
                 }
                 
                 dv.addMonedas(m);
+                return null;
+            }
+            
+            else if(m==null){
+                try{
+                    throw new PagoIncorrectoException("No tienes una moneda valida");
+                }catch(PagoIncorrectoException e){
+                    System.out.println(e.getMessage());
+                }
                 return null;
             }
             
