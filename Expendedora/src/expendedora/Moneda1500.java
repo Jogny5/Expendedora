@@ -1,6 +1,6 @@
 package expendedora;
 
-class Moneda1500 extends Moneda{
+public class Moneda1500 extends Moneda {
     
     public Moneda1500(){
     
@@ -10,6 +10,5 @@ class Moneda1500 extends Moneda{
     public int getValor() {
         return 1500;
     }
-    
     
 }

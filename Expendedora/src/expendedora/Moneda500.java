@@ -1,6 +1,7 @@
 package expendedora;
 
-class Moneda500 extends Moneda{
+
+public class Moneda500 extends Moneda {
     
     public Moneda500(){
     
@@ -13,3 +14,4 @@ class Moneda500 extends Moneda{
     
      
 }
+

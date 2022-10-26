@@ -41,9 +41,6 @@ public class Expendedora {
         
         
         
-        
-        
-        
         Comprador com = new Comprador(m3k,1,exp1);
            
         exp1.comprarBebida(m3k,1);
@@ -73,7 +70,7 @@ public class Expendedora {
         
         Comprador com4 = new Comprador(m2k,1,exp4);
         exp4.comprarBebida(m2k,1);
-        
+
     }
     
 }

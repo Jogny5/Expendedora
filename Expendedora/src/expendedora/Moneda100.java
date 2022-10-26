@@ -1,15 +1,11 @@
 package expendedora;
 
-class Moneda100 extends Moneda{
+public class Moneda100 extends Moneda {
     
-    public Moneda100(){
-    
-    }
-
     @Override
-    public int getValor() {
+    public int getValor(){
         return 100;
     }
     
-    
 }
+

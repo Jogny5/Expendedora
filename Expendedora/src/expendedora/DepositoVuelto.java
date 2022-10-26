@@ -2,10 +2,12 @@ package expendedora;
 
 import java.util.ArrayList;
 
+
 public class DepositoVuelto {
     
     private final ArrayList<Moneda> aa;
     private int tamano;
+
         
     public DepositoVuelto(){
         
@@ -30,10 +32,12 @@ public class DepositoVuelto {
         }
         
     }
+
     public Moneda Recorrer(int i){
         return aa.get(i);
     }
     public int tamano(){
         return aa.size();
     }
+
 }

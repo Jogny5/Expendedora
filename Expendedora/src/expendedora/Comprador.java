@@ -1,8 +1,8 @@
 package expendedora;
 
-import java.util.ArrayList;
 
 public class Comprador {
+    
     private Moneda m;
     private int cualBebida;    
     private Expendedor exp;
@@ -14,6 +14,7 @@ public class Comprador {
         exp=e;
     }
     
+
     
     public int cuantoVuelto(){
         
@@ -23,10 +24,12 @@ public class Comprador {
         }
         
         return a;
+
         
     }
     
     public String queBebiste(){
+
         if(this.cualBebida==1){
             return new String ("cocacola");
         }else if(this.cualBebida==2){
@@ -36,6 +39,7 @@ public class Comprador {
         }else{
             return null;
         }
+
         
     }
     

@@ -1,10 +1,9 @@
 package expendedora;
 
-import java.util.ArrayList;
-
-abstract class Bebida {
+public abstract class Bebida {
     
-    private int serie;
+    private final int serie;
+    
     public Bebida(int n){
         this.serie=n;
     }
@@ -15,5 +14,6 @@ abstract class Bebida {
 
     public int getSerie() {
         return serie;
-    }
+    
+    
 }
