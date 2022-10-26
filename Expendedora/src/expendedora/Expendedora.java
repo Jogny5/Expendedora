@@ -18,6 +18,8 @@ public class Expendedora {
         Moneda1500 m4k = new Moneda1500();
         Moneda1500 m5k = null;
         
+        System.out.println(m1k.getSerie());
+        
 //prueba general        
                 
         Comprador com1 = new Comprador(m1k,2,exp1);
@@ -35,6 +37,9 @@ public class Expendedora {
         System.out.println(exp1.getVuelto());
         
         System.out.println(com1.queBebiste());
+        
+        
+        
         
         
         

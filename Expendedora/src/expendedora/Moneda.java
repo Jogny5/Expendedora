@@ -1,15 +1,17 @@
 package expendedora;
 
-import java.util.ArrayList;
-
 abstract class Moneda {
     
     public Moneda(){
         
     }
-    public Moneda getSerie (){
-        return this;
+    
+    public String getSerie (){
+        
+        return super.toString();
     }
     public abstract int getValor();
+    
+    
     
 }
