@@ -10,7 +10,7 @@ public class CocaCola extends Bebida {
     @Override
     public String beber(){
         
-        return "cocacola";
+        return super.beber()+new String("cocacola");
     }
     
 }
