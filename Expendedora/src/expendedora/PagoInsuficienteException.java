@@ -6,5 +6,6 @@ public class PagoInsuficienteException extends Exception {
         
         super(mensaje);
     }
-    
+
 }
+

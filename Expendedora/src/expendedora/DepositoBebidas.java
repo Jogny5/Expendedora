@@ -2,7 +2,10 @@ package expendedora;
 
 import java.util.ArrayList;
 
-class DepositoBebidas{
+
+public class DepositoBebidas {
+    
+
     
     private final ArrayList<Bebida> aa;
         

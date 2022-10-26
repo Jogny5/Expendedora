@@ -1,6 +1,5 @@
 package expendedora;
 
-
 public class Moneda100 extends Moneda {
     
     @Override
@@ -9,3 +8,4 @@ public class Moneda100 extends Moneda {
     }
     
 }
+

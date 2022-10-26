@@ -1,17 +1,14 @@
 package expendedora;
 
-
 public abstract class Moneda {
     
     public Moneda(){
         
     }
-    
-    public Moneda getSerie(){
+    public String getSerie (){
         
-        return this;
+        return super.toString();
     }
-    
     public abstract int getValor();
     
 }

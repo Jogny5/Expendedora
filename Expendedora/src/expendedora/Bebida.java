@@ -1,19 +1,19 @@
 package expendedora;
 
 public abstract class Bebida {
-  
-    private final int numSerie;
     
-    public Bebida(int x){
-        
-        numSerie=x;
+    private final int serie;
+    
+    public Bebida(int n){
+        this.serie=n;
     }
     
-    public int getSerie(){
-        
-        return numSerie;
+    public String beber(){
+        return new String("sabor: ");
     }
+
+    public int getSerie() {
+        return serie;
     
-    public abstract String beber();
     
 }

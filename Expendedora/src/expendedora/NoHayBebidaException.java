@@ -6,5 +6,6 @@ public class NoHayBebidaException extends Exception {
         
         super(mensaje);
     }
-    
+  
 }
+

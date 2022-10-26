@@ -1,16 +1,12 @@
 package expendedora;
 
-public class Fanta extends Bebida {
-    
-    public Fanta(int x){
-        
-        super(x);
+public class Fanta extends Bebida{
+    public Fanta(int c){
+        super(c);
     }
-    
-    @Override
+     @Override
     public String beber(){
-        
-        return "fanta";
+        return super.beber()+new String("fanta");
     }
-    
+
 }
